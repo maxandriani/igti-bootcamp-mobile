@@ -1,0 +1,24 @@
+{
+  "name": "desafio-js",
+  "version": "1.0.0",
+  "description": "Questões 1 a 12",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npx tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "igti",
+    "bootcamp",
+    "js",
+    "mobile"
+  ],
+  "author": "max.andriani",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.0.23",
+    "rxjs": "^6.6.0",
+    "typescript": "^3.9.6"
+  }
+}
