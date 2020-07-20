@@ -6,7 +6,7 @@ public class Account {
     Integer agencia;
     Integer conta;
     String name;
-    Integer balance = 0;
+    Double balance = 0.0;
     
     public Account() {}
     
@@ -14,7 +14,7 @@ public class Account {
 	           Integer agencia,
 	           Integer conta,
 	           String name,
-	           Integer balance) {
+	           Double balance) {
 	setId(id);
 	setAgencia(agencia);
 	setConta(conta);
@@ -54,11 +54,11 @@ public class Account {
         this.name = name;
     }
 
-    public Integer getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
-    public void setBalance(Integer balance) {
+    public void setBalance(Double balance) {
         this.balance = balance;
     }
 

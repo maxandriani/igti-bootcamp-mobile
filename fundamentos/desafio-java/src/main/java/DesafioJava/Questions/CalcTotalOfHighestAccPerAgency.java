@@ -19,7 +19,7 @@ public class CalcTotalOfHighestAccPerAgency implements IQuestion {
 	
 	for (var acc : accounts) {
 	    if (agencies.containsKey(acc.getAgencia())) {
-		if (MoreObjects.firstNonNull(agencies.get(acc.getAgencia()).getBalance(), 0) < acc.getBalance()) {
+		if (MoreObjects.firstNonNull(agencies.get(acc.getAgencia()).getBalance(), 0.0) < acc.getBalance()) {
 		    agencies.put(acc.getAgencia(), acc);
 		}
 	    } else {

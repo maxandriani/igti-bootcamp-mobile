@@ -13,7 +13,7 @@ public class GetClientWLowestBalanceAtAg47 implements IQuestion {
 	var acc = accounts
 		.stream()
 		.filter(item -> item.getAgencia().equals(47))
-		.sorted((a, b) -> a.getBalance() - b.getBalance())
+		.sorted((a, b) -> (int) (a.getBalance() - b.getBalance()))
 		.findFirst()
 		.orElseThrow();
 	

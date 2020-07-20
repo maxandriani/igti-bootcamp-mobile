@@ -12,7 +12,7 @@ public class GetClientWHighestBalanceAtAg10 implements IQuestion {
 	var acc = accounts
 	  .stream()
 	  .filter(a -> a.getAgencia().equals(10))
-	  .sorted((a, b) -> b.getBalance() - a.getBalance())
+	  .sorted((a, b) -> (int) (b.getBalance() - a.getBalance()))
 	  .findFirst()
 	  .orElseThrow();
 	

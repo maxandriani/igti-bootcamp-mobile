@@ -13,12 +13,12 @@ public class HighestBalanceAgency implements IQuestion {
     @Override
     public void execute(Collection<Account> accounts) {
 	
-	var accs = new HashMap<Integer, Integer>(); // Agência vs Saldos...
+	var accs = new HashMap<Integer, Double>(); // Agência vs Saldos...
 	
 	for (var acc : accounts) {
 	    accs.put(acc.getAgencia(),
 		     (
-			     MoreObjects.firstNonNull(accs.get(acc.getAgencia()), 0)
+			     MoreObjects.firstNonNull(accs.get(acc.getAgencia()), 0.0)
 			     + acc.getBalance()
 		     ));
 	}
@@ -26,7 +26,7 @@ public class HighestBalanceAgency implements IQuestion {
 	var node = accs
 		.entrySet()
 		.stream()
-		.sorted((a, b) -> b.getValue() - a.getValue())
+		.sorted((a, b) -> (int) (b.getValue() - a.getValue()))
 		.findFirst()
 		.orElseThrow();
 

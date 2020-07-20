@@ -13,15 +13,15 @@ public class LowestBalanceAgency implements IQuestion {
     @Override
     public void execute(Collection<Account> accounts) {
 	
-	var accs = new HashMap<Integer, Integer>();
+	var accs = new HashMap<Integer, Double>();
 	
 	for (var acc : accounts) {
-	    accs.put(acc.getAgencia(), MoreObjects.firstNonNull(accs.get(acc.getAgencia()), 0) + acc.getBalance());
+	    accs.put(acc.getAgencia(), MoreObjects.firstNonNull(accs.get(acc.getAgencia()), 0.0) + acc.getBalance());
 	}
 	
 	var node = accs.entrySet()
 		.stream()
-		.sorted((a, b) -> a.getValue() - b.getValue())
+		.sorted((a, b) -> (int) (a.getValue() - b.getValue()))
 		.findFirst()
 		.orElseThrow();
 	

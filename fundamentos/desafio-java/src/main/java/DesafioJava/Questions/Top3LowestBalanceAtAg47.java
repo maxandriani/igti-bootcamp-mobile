@@ -19,7 +19,7 @@ public class Top3LowestBalanceAtAg47 implements IQuestion {
 	var names = accounts
 		.stream()
 		.filter(acc -> acc.getAgencia().equals(47))
-		.sorted((a, b) -> a.getBalance() - b.getBalance())
+		.sorted((a, b) -> (int) (a.getBalance() - b.getBalance()))
 		.limit(3)
 		.map(item -> item.getName())
 		.sorted()
