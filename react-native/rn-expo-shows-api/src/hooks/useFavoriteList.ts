@@ -3,7 +3,7 @@ import loadFavoriteShows from '../actions/loadFavoriteShows';
 import ShowListDto from '../entities/list-show.dto';
 import saveFavoriteShows from '../actions/saveFavoriteShows';
 
-export default function useFavoriteList(): [Array<ShowListDto>, (add: ShowListDto) => void, (remove: ShowListDto) => void] {
+export default function useFavoriteList(query?: string): [Array<ShowListDto>, (add: ShowListDto) => void, (remove: ShowListDto) => void, () => void] {
   
   const [favoriteShows, setFavoriteShows] = useState<Array<ShowListDto>>([]);
 
@@ -21,11 +21,16 @@ export default function useFavoriteList(): [Array<ShowListDto>, (add: ShowListDt
     setFavoriteShows(list);
   }
 
-  useEffect(() => {
-    loadFavoriteShows()
-      .then(shows => setFavoriteShows(shows))
-      .catch(err => console.error(err));
-  }, [])
+  async function refreshList() {
+    const shows = await loadFavoriteShows();
+    setFavoriteShows(shows
+      .filter(item => !query || item.name.toLowerCase().match(query.toLowerCase())));
+  }
 
-  return [favoriteShows, addFavorite, removeFavorite];
+  useEffect(() => {
+    refreshList()
+      .catch(err => console.error(err));
+  }, [query])
+
+  return [favoriteShows, addFavorite, removeFavorite, refreshList];
 }

@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
     color: colors.warning
   },
   showList: {
-    flexShrink: 1
+    flexShrink: 1,
+    flex: 1
   },
   searchBar: {
     marginVertical: 18
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
 export default function FavoriteShowsListScreen({ navigation }: IFavoriteShowsListScreenProps) {
 
   const [search, setSearch] = useState<string>('');
-  const [shows] = useFavoriteList();
+  const [shows, , , refreshList] = useFavoriteList(search);
 
   return (
     <View style={styles.viewStyle}>
@@ -54,7 +55,8 @@ export default function FavoriteShowsListScreen({ navigation }: IFavoriteShowsLi
 
       <View style={styles.showList}>
         <ShowList 
-          items={shows.filter(item => !search || item.name.toLowerCase().match(search.toLowerCase()))}
+          onRefresh={refreshList}
+          items={shows}
           onPress={show => navigation.navigate(favoriteTabs.ShowDetailes, { showId: show.id, showName: show.name })}></ShowList>
       </View>
     </View>

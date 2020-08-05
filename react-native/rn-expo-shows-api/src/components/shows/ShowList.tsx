@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, FlatList, TouchableOpacity, View, Image } from 'react-native';
 import colors from '../../shared/colors';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -12,6 +12,7 @@ export interface IShowListItemProps {
 export interface IShowListProps {
   items: Array<ShowListDto>;
   onPress: (item: ShowListDto) => void;
+  onRefresh?: (() => void) | null | undefined;
 }
 
 const styles = StyleSheet.create({
@@ -62,11 +63,24 @@ export function ShowListItem({ item, onPress }: IShowListItemProps) {
   )
 }
 
-export default function ShowList({ items, onPress }: IShowListProps) {
+export default function ShowList({ items, onPress, onRefresh }: IShowListProps) {
+  const [refresh, setRefresh] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setRefresh(false), 1000);
+    return function dispose() { clearTimeout(timeout) };
+  }, [ refresh ]);
+
   return (
     <FlatList
       style={styles.container}
       data={items}
+      onRefresh={() => {
+        setRefresh(true);
+        if (onRefresh)
+          onRefresh();
+      }}
+      refreshing={refresh}
       renderItem={({ item }) => (
         <ShowListItem 
           item={item}
