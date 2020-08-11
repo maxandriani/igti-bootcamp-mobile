@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Broadcast</string>
+    <string name="hello_receiver_message_received">Mensagem Recebida 😍</string>
+    <string name="hello_receiver_battery_low">Battery Low 😪</string>
+    <string name="hello_receiver_airplane_mode">Ariplane Mode ✈🛫🛬</string>
+</resources>
