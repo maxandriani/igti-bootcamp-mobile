@@ -1,0 +1,102 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="android:statusBarColor">@color/header_background_dark</item>
+        <item name="android:navigationBarColor">@color/header_secondary_background</item>
+
+        <item name="colorPrimary">@color/header_background</item>
+        <item name="colorPrimaryVariant">@color/header_background_dark</item>
+        <item name="colorOnPrimary">@color/text_dark</item>
+        <item name="colorSecondary">@color/header_secondary_background</item>
+        <item name="colorSecondaryVariant">@color/header_secondary_background_dark</item>
+        <item name="colorOnSecondary">@color/text_dark</item>
+
+        <item name="backgroundColor">@color/page_background</item>
+
+        <item name="materialButtonStyle">@style/AppTheme.Buttons</item>
+        <item name="textInputStyle">@style/AppTheme.Inputs</item>
+        <item name="actionOverflowButtonStyle">@style/AppTheme.OverflowButtonStyle</item> <!-- ìcone da navbar -->
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!-- buttons -->
+    <style name="AppTheme.Buttons" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/header_secondary_background</item>
+    </style>
+
+    <!-- inputs -->
+    <style name="AppTheme.Inputs" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="backgroundTint">@color/input_background</item>
+        <item name="strokeColor">@color/input_border</item>
+        <item name="colorOnPrimary">@color/input_icon</item>
+        <item name="actionMenuTextColor">@color/text_dark</item>
+    </style>
+
+    <!-- NavBar -->
+    <style name="AppTheme.NavBar.Expanded" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="AppTheme.NavBar.Collapsed" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="AppTheme.NavBar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="iconTint">@color/text_dark</item>
+        <item name="titleTextColor">@color/text_dark</item>
+        <item name="subtitleTextColor">@color/material_on_primary_emphasis_medium</item>
+        <item name="android:textColorSecondary">@color/text_dark</item>
+        <item name="android:tint">@color/text_dark</item>
+    </style>
+
+    <style name="AppTheme.OverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/text_dark</item>
+    </style>
+
+
+<!--    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.NoActionBar" />-->
+<!--    <style name="AppTheme.Light" parent="Theme.MaterialComponents.Light" />-->
+<!--    <style name="AppTheme.Light.NoActionBar" parent="Theme.MaterialComponents.Light.NoActionBar" />-->
+<!--    <style name="AppTheme.Light.DarkActionBar" parent="Theme.MaterialComponents.Light.DarkActionBar" />-->
+<!--    <style name="AppTheme.DayNight" parent="Theme.MaterialComponents.DayNight" />-->
+<!--    <style name="AppTheme.DayNight.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar" />-->
+<!--    <style name="AppTheme.DayNight.DarkActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar" />-->
+
+<!--    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+<!--    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+    <!-- Base application theme. -->
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/color_primary</item>-->
+<!--        <item name="colorPrimaryDark">@color/color_primary_dark</item>-->
+<!--        <item name="colorAccent">@color/color_accent</item>-->
+<!--    </style>-->
+
+<!--    <style name="AppTheme.NoActionBar">-->
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--    </style>-->
+
+
+
+    <!-- expansive main menu -->
+<!--    <style name="TextAppearance.App.CollapsingToolbar.Expanded" parent="TextAppearance.MaterialComponents.Headline5">-->
+<!--        <item name="android:textColor">?attr/colorOnPrimary</item>-->
+<!--    </style>-->
+
+<!--    <style name="TextAppearance.App.CollapsingToolbar.Collapsed" parent="TextAppearance.MaterialComponents.Headline6">-->
+<!--        <item name="android:textColor">?attr/colorOnPrimary</item>-->
+<!--    </style>-->
+
+    <!-- style name="Theme.App" parent="Theme.MaterialComponents.*.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style -->
+
+</resources>

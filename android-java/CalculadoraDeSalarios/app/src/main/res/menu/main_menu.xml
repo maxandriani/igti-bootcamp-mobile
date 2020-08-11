@@ -1,0 +1,16 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/main_menu_settings"
+        android:orderInCategory="100"
+        android:title="@string/main_menu_settings_description"
+        android:contentDescription="@string/main_menu_settings_description"
+        android:icon="@drawable/settings_24px"
+        app:showAsAction="always"
+        android:tint="@color/text_dark"
+        />
+
+</menu>

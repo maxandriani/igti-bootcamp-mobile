@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_primary">#000000</color>
+    <color name="text_accent">#EB5902</color>
+    <color name="text_dark">#ffffff</color>
+    <color name="text_good">#49873F</color>
+    <color name="text_bad">#FF3408</color>
+    <color name="element_accent">#EB5902</color>
+    <!-- header -->
+    <color name="header_background">#49873F</color>
+    <color name="header_background_dark">#29612B</color>
+    <color name="header_secondary_background">#EB5902</color>
+    <color name="header_secondary_background_dark">#FF3408</color>
+    <!-- page -->
+    <color name="page_background">#E5F2B3</color>
+    <!-- inputs -->
+    <color name="input_border">#EB5902</color>
+    <color name="input_label">#EB5902</color>
+    <color name="input_text">#000000</color>
+    <color name="input_icon">#696F52</color>
+    <color name="input_background">#D5E1A6</color>
+    <!-- buttons -->
+    <color name="main_button_background">#EB5902</color>
+    <color name="main_button_text">#ffffff</color>
+    <!-- card -->
+    <color name="card_background">#ffffff</color>
+
+</resources>
