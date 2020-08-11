@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HelloFileSystem</string>
+    <string name="form_input_first_name">Nome</string>
+    <string name="form_input_last_name">Sobrenome</string>
+    <string name="form_submit_btn">Salvar</string>
+    <string name="form_submit_success">Usuário salvo com sucesso!</string>
+    <string name="title_activity_hello_saved_user">HelloSavedUser</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="back_button">Voltar</string>
+</resources>
