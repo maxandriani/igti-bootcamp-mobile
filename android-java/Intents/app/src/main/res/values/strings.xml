@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Intents</string>
+    <string name="intent_button_text">Call Intent</string>
+    <string name="unknown_intent_button_text">Unknown Intent</string>
+</resources>
