@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ContentProvider</string>
+    <string name="app_home_title">Contacts</string>
+</resources>
