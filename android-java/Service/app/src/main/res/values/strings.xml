@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Service</string>
+    <string name="hello_service_on_start_command">HelloService inicializado onStartCommand() 😂</string>
+    <string name="hello_service_on_destroy">HelloService destruindo... 😥</string>
+    <string name="hello_service_on_create">HelloService onCreate() 😎</string>
+    <string name="hello_service_on_bind">HelloService onBind() 😚</string>
+    <string name="main_start">Start</string>
+    <string name="main_finish">Finish</string>
+</resources>
