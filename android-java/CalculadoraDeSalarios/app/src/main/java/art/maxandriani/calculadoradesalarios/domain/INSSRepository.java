@@ -12,7 +12,7 @@ public class INSSRepository {
     new TaxRule(1045.01, 2089.6, 0.09, 15.67),
     new TaxRule(2089.61, 3134.4, 0.12, 78.36),
     new TaxRule(3134.41, 6101.06, 0.14, 141.05),
-    new TaxRule(6101.07, Double.MAX_VALUE, 0.14, 141.05)));
+    new TaxRule(6101.07, Double.MAX_VALUE, 0.14, 141.05, 713.10)));
 
   public Double getINSSBalanceBySalary(final INSSInputDto data) throws Exception {
     TaxRule rule = rules

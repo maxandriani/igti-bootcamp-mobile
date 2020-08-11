@@ -6,7 +6,7 @@ public class TaxRule {
   private Double max;
   private Double tax;
   private Double discount;
-  private Double maxTax =  713.10;
+  private Double maxTax = Double.MAX_VALUE;
 
   public TaxRule(
     Double min,
@@ -18,6 +18,17 @@ public class TaxRule {
     this.max = max;
     this.tax = tax;
     this.discount = discount;
+  }
+
+  public TaxRule(
+    Double min,
+    Double max,
+    Double tax,
+    Double discount,
+    Double maxTax
+  ) {
+    this(min, max, tax, discount);
+    this.maxTax = maxTax;
   }
 
   public boolean isCompliance(Double salary) {
