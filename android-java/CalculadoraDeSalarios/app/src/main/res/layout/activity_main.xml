@@ -44,7 +44,7 @@
                 android:background="@android:color/transparent"
                 app:layout_collapseMode="pin"
                 app:title="@string/app_name"
-                app:menu="@menu/main_menu"
+
                 style="@style/AppTheme.NavBar"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -118,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:labelFor="@string/main_form_input_descontos_label"
                     android:maxLines="1"
+                    android:imeOptions="actionDone"
                     android:inputType="numberDecimal"
                     android:id="@+id/main_form_input_descontos"/>
 

@@ -25,12 +25,13 @@
             android:background="@android:color/transparent"
             app:layout_collapseMode="pin"
             app:title="@string/result_title"
-            app:menu="@menu/main_menu"
+
+            app:navigationIcon="@drawable/arrow_back_24px"
             style="@style/AppTheme.NavBar"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -265,7 +266,7 @@
                             android:id="@+id/result_value_percentil_descontos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="24dp"
+                            android:layout_marginStart="24dp"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large"
                             android:textColor="@color/text_bad" />
@@ -293,6 +294,6 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

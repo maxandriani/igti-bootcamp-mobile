@@ -2,22 +2,17 @@ package art.maxandriani.calculadoradesalarios;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.util.AndroidException;
-import android.view.MotionEvent;
+import android.view.KeyEvent;
 import android.view.View;
 import android.os.Bundle;
-import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.TextInputEditText;
-
-import javax.xml.transform.Result;
 
 import art.maxandriani.calculadoradesalarios.infra.KeyboardUtils;
 import art.maxandriani.calculadoradesalarios.infra.MainMenuUtils;
@@ -45,6 +40,20 @@ public class MainActivity extends AppCompatActivity {
     setupKeyboardListener();
     setupMenuListener();
     setupFormSubmit();
+    setupLastInputSubmitTrigger();
+  }
+
+  /**
+   * Adiciona um botão de Done no teclado do último botão, e quando pressionado dispara o form....
+   */
+  private void setupLastInputSubmitTrigger() {
+    outrosDescontosInput.setOnEditorActionListener((TextView v, int actionId, KeyEvent event) -> {
+      if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_GO || actionId == EditorInfo.IME_ACTION_SEND) {
+        calcularBtn.performClick();
+        return true;
+      }
+      return false;
+    });
   }
 
   /**

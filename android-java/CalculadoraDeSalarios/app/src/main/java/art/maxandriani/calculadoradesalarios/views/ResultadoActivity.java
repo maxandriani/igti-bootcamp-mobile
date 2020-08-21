@@ -11,6 +11,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 
 import java.text.NumberFormat;
 
+import art.maxandriani.calculadoradesalarios.MainActivity;
 import art.maxandriani.calculadoradesalarios.R;
 import art.maxandriani.calculadoradesalarios.domain.INSSInputDto;
 import art.maxandriani.calculadoradesalarios.domain.INSSRepository;
@@ -64,6 +65,10 @@ public class ResultadoActivity extends AppCompatActivity {
   private void setupMenuListener() {
     MaterialToolbar toolbar = findViewById(R.id.toolbar);
     MainMenuUtils.setupMainMenu(toolbar, this);
+    toolbar.setNavigationOnClickListener(item -> {
+      Intent goToHome = new Intent(ResultadoActivity.this, MainActivity.class);
+      startActivity(goToHome);
+    });
   }
 
   private void inflateResult() {
