@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App UI -->
+    <color name="text_primary">#010342</color>
+    <color name="text_accent">#000025</color>
+    <color name="text_dark">#fff</color>
+    <color name="text_good">#88BF50</color>
+    <color name="text_bad">#D9072D</color>
+    <!-- Default screen -->
+    <color name="default_header_background">#010342</color>
+    <color name="default_header_background_dark">#000025</color>
+    <color name="default_header_text">#fff</color>
+    <color name="default_bottom_background">#0D8BD9</color>
+    <color name="default_bottom_background_dark">#2291F2</color>
+    <color name="default_bottom_text">#fff</color>
+    <color name="default_question_background">#E7EBF2</color>
+
+    <!-- Success screen -->
+    <color name="success_header_background">#88BF50</color>
+    <color name="success_header_background_dark">#639F50</color>
+    <color name="success_header_text">#fff</color>
+    <color name="success_bottom_background">#B8D930</color>
+    <color name="success_bottom_background_dark">#A4DE42</color>
+    <color name="success_bottom_text">#fff</color>
+    <color name="success_question_background">#EBFFD7</color>
+
+    <!-- Fail screen -->
+    <color name="fail_header_background">#F23847</color>
+    <color name="fail_header_background_dark">#D9072D</color>
+    <color name="fail_header_text">#fff</color>
+    <color name="fail_bottom_background">#F27D16</color>
+    <color name="fail_bottom_background_dark">#F2B90C</color>
+    <color name="fail_bottom_text">#fff</color>
+    <color name="fail_question_background">#FFFFE4</color>
+</resources>

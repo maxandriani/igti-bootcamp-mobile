@@ -1,0 +1,34 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/text_primary</item>
+        <item name="colorPrimaryDark">@color/text_dark</item>
+        <item name="colorAccent">@color/text_accent</item>
+
+        <item name="android:statusBarColor">@color/default_header_background</item>
+        <item name="android:navigationBarColor">@color/default_bottom_background</item>
+
+        <item name="android:windowBackground">@drawable/bg_blue</item>
+        <item name="android:windowBackgroundFallback">@color/default_question_background</item>
+<!--        <item name="actionOverflowButtonStyle">@style/AppTheme.OverflowButtonStyle</item> &lt;!&ndash; ìcone da navbar &ndash;&gt;-->
+    </style>
+
+    <style name="AppTheme.Success" parent="AppTheme">
+        <item name="android:statusBarColor">@color/success_header_background</item>
+        <item name="android:navigationBarColor">@color/success_bottom_background</item>
+
+        <item name="android:windowBackground">@drawable/bg_success</item>
+        <item name="android:windowBackgroundFallback">@color/success_question_background</item>
+    </style>
+
+    <style name="AppTheme.Fail" parent="AppTheme">
+        <item name="android:statusBarColor">@color/fail_header_background</item>
+        <item name="android:navigationBarColor">@color/fail_bottom_background</item>
+
+        <item name="android:windowBackground">@drawable/bg_fail</item>
+        <item name="android:windowBackgroundFallback">@color/fail_question_background</item>
+    </style>
+
+
+</resources>

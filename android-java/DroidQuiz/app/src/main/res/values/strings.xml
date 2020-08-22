@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DroidQuiz</string>
+    <string name="owl">Pequena corujinha azul :)</string>
+
+    <!-- Splash Screen -->
+
+    <!-- Start Screen -->
+    <string name="start_play_btn_label">Jogar 😍</string>
+    <string name="start_welcome_message">Preparando Ambiente...</string>
+
+    <!-- Question Screen -->
+    <string name="question_title">Pergunta!</string>
+    <string name="question_yes_btn_label">Sim</string>
+    <string name="question_no_btn_label">Não</string>
+    <string name="question_success">Correto!</string>
+    <string name="question_fail">Errooouu</string>
+
+    <!-- Result Screen -->
+    <string name="result_title">Resultado!</string>
+    <string name="result_bad_message">Infelizmente você não atingiu 50%. Estude um pouco mais e tente novamente!</string>
+    <string name="result_bood_message">Parabens!!! Você está por dentro do mundo Android 🤗</string>
+    <string name="result_back_btn">Jogar Novamente!</string>
+</resources>
